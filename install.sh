@@ -8,7 +8,7 @@ if [ "${CODESPACES}" = "true" ]; then
 
     # Add one that just uses secrets available in the Codespace
     git config --global credential.helper "username=${GITHUB_USER}"
-    #"password=${GH_TOKEN}";
+    git config --global credential.helper "password=${GH_TOKEN}";
 fi
 
 git clone https://github.com/david-tandem/personal-sdk.git
