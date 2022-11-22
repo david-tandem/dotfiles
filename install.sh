@@ -7,7 +7,8 @@ if [ "${CODESPACES}" = "true" ]; then
     sudo sed -i -E 's/helper =.*//' /etc/gitconfig
 
     # Add one that just uses secrets available in the Codespace
-    git config --global credential.helper echo "username=${GITHUB_USER}"; echo "password=${GH_TOKEN}";
+    git config --global credential.helper "username=${GITHUB_USER}"
+    #"password=${GH_TOKEN}";
 fi
 
 git clone https://github.com/david-tandem/personal-sdk.git
